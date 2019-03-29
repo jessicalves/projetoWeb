@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="projetoWeb.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="navegacao">
+        <div id="area">
+            <h1 id="logo"><span class="verde">Loja</span></h1>
+            <div id="menu">
+                <a href="paginaPrincipal.aspx">Home</a>
+                <a href="cliente2.aspx">Cliente</a>
+                <a href="produto2.aspx">Produtos</a>
+            </div>
+        </div>
+    </div>
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="Corpo" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>

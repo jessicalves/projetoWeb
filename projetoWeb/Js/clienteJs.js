@@ -1,0 +1,4 @@
+﻿function editar() {
+
+        alert("clicou");
+}
