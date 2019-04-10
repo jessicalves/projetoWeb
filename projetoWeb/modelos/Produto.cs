@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace Loja
 {
@@ -12,23 +13,22 @@ namespace Loja
         public string codigoProduto;
         public string valorProduto;
 
-        public static void listarProdutos()
+        public static DataTable listarProdutos()
         {
-            Console.Clear();
-            Console.WriteLine("-------- LISTA DE PRODUTOS -----------");
-            Console.WriteLine("|ID PRODUDO\t"+"|NOME\t" + "|CODIGO\t" + "|VALOR R$");
-            Console.WriteLine("--------------------------------------");
+            //Console.Clear();
+            //Console.WriteLine("-------- LISTA DE PRODUTOS -----------");
+            //Console.WriteLine("|ID PRODUDO\t"+"|NOME\t" + "|CODIGO\t" + "|VALOR R$");
+            //Console.WriteLine("--------------------------------------");
 
             Banco banco = new Banco();
-            banco.sql = ("SELECT prod_id,prod_nome, prod_codigo, prod_valor FROM public.produto ORDER BY prod_id");
+            banco.sql = ("SELECT prod_id as ID,prod_nome as NOME, prod_codigo as CODIGO, prod_valor as VALOR FROM public.produto ORDER BY prod_id");
+            return banco.getDataTable();
 
-            var ds = banco.getDataTable();
-
-            for(int i =0; i<ds.Rows.Count;i++)
-            {
-                Console.WriteLine("|"+ ds.Rows[i][0]+ "\t" + "|" + ds.Rows[i][1] + "\t" + "|" + ds.Rows[i][2] + "\t" + "|" + ds.Rows[i][3] + "\t");
-            }
-            Console.ReadKey();
+            //for(int i =0; i<ds.Rows.Count;i++)
+            //{
+            //    Console.WriteLine("|"+ ds.Rows[i][0]+ "\t" + "|" + ds.Rows[i][1] + "\t" + "|" + ds.Rows[i][2] + "\t" + "|" + ds.Rows[i][3] + "\t");
+            //}
+            //Console.ReadKey();
         }
 
         public static void cadastrarProduto(Produto produto)

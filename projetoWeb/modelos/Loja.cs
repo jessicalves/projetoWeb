@@ -1,5 +1,4 @@
-﻿using Npgsql;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 
@@ -20,13 +19,13 @@ namespace Loja
             banco.sql = ("SELECT clie_id as ID, clie_nome as Nome, clie_cpf as CPF FROM public.cliente ORDER BY clie_id");
             return banco.getDataTable();
 
-        //    for(int i = 0; i<ds.Rows.Count; i++)
-        //    { 
+            //    for(int i = 0; i<ds.Rows.Count; i++)
+            //    { 
 
-        //            Console.WriteLine("|" + ds.Rows[i][1] + "\t" + "|" + ds.Rows[i][2] + "\t");
+            //            Console.WriteLine("|" + ds.Rows[i][1] + "\t" + "|" + ds.Rows[i][2] + "\t");
 
-        //    }
-        //    Console.ReadKey();
+            //    }
+            //    Console.ReadKey();
         }
 
         public static void Selecionar(string cpfSelecionado)
@@ -39,7 +38,7 @@ namespace Loja
                                    WHERE clie_cpf = @p";
             banco.addParameters("p", cpfProcurado);
             var dados = banco.getDataTable();
-            
+
             var idCliente = dados.Rows[0][0];
             var nomeBanco = dados.Rows[0][1];
             var cpfBanco = dados.Rows[0][2];
@@ -100,7 +99,7 @@ namespace Loja
                     b.addParameters("clie_id", clienteBanco.idCliente);
                     var id = b.GetInt();
 
-                    clienteBanco.fazerCompra(id,produtos,quantidade);
+                    clienteBanco.fazerCompra(id, produtos, quantidade);
 
                     Console.WriteLine("\nPEDIDO FEITO COM SUCESSO");
                     Console.ReadKey();
@@ -153,7 +152,7 @@ namespace Loja
             //Cliente removerCliente = listClientes.Find(x => x.cfpCliente == remover);
 
             Banco banco = new Banco();
-            banco.sql = @"DELETE FROM public.cliente WHERE clie_cpf = @cpf";        
+            banco.sql = @"DELETE FROM public.cliente WHERE clie_cpf = @cpf";
             banco.addParameters("cpf", remover);
             banco.getDataTable();
 
@@ -164,6 +163,53 @@ namespace Loja
             else
             {
                 Console.WriteLine("\n\n~~~~~ CLIENTE REMOVIDO COM SUCESSO ~~~~~");
+            }
+        }
+
+        public static bool Existe(int id)
+        {
+            Banco b = new Banco()
+            {
+                sql = @"select clie_id from public.cliente where clie_id = @id"
+            };
+            b.addParameters("id", id);
+            var resp = b.getDataTable();
+
+            return resp.Rows.Count > 0;
+        }
+
+        public static Cliente GetCliente(int id)
+        {
+            Banco banco = new Banco()
+            {
+                sql = "SELECT clie_id, clie_nome, clie_cpf FROM cliente WHERE clie_id=@clie_id"
+            };
+            banco.addParameters("clie_id", id);
+            var c = banco.getDataTable();
+            return new Cliente()
+            {
+                idCliente = Convert.ToInt32(c.Rows[0][0]),
+                nomeCliente = c.Rows[0][1].ToString(),
+                cfpCliente = c.Rows[0][2].ToString()
+            };
+        }
+
+        public static bool updateCliente(Cliente c)
+        {
+            try
+            {
+                Banco banco = new Banco()
+                {
+                    sql = "UPDATE cliente SET clie_nome=@clie_nome, clie_cpf=@clie_cpf WHERE clie_id=@clie_id"
+                };
+                banco.addParameters("clie_id", c.idCliente);
+                banco.addParameters("clie_nome", c.nomeCliente);
+                banco.addParameters("clie_cpf", c.cfpCliente);
+                banco.getDataTable();
+                return true;
+            } catch (Exception)
+            {
+                return false;
             }
         }
     }

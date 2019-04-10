@@ -1,7 +1,6 @@
 ﻿
-    /*Limpar formatações padrão*/
-    *
-{
+/*Limpar formatações padrão*/
+* {
     margin: 0;
     padding: 0;
 }
@@ -40,10 +39,11 @@ body {
     padding: 10px 0;
 }
 
-
-
 h2 {
-    color: #b9c941;
+    color: cornflowerblue;
+    margin: 6px;
+    margin-left: auto;
+    margin-top: auto;
 }
 
 /****************************************************
@@ -54,29 +54,29 @@ a {
 }
     /*Links não visitados*/
     a:link {
-        color: #838383;
+        color:cadetblue;
     }
 
     /*Links vistados*/
     a:visited {
-        color: #838383;
+        color: cadetblue;
     }
 
     /*Links hover*/
     a:hover {
-        color: #fff;
-        background: #b9c941;
+        color: black;
+        background-color: cornflowerblue;
     }
 
     /*Links active*/
     a:active {
-        color: #535353;
+        color:black;
     }
 
 
 /*Classes*/
-.verde {
-    color: #b9c941;
+.cor {
+    color:cornflowerblue;
 }
 
 .data-postagem {
@@ -89,12 +89,13 @@ a {
 
 .img-postagem {
     float: left;
-    margin: 0 10px 5px 0;
-    max-width: 200px;
-    max-height: 150px;
-    width: auto;
+    margin: -2px 51px auto auto;
+    max-width: 56px;
+    max-height: 210px;
+    width: 50px;
     height: auto;
 }
+
 
 .postado {
     border-left: 5px solid #d8d8d8;
@@ -102,15 +103,29 @@ a {
     display: block;
     margin-top: 10px;
 }
+
 .postagem {
     background: #fff;
-    padding: 10px;
-    margin-bottom: 200px;
+    padding: 24px;
+    margin-bottom: 64px;
 }
 
 .grid_Cliente {
     width: 600px;
+    position: relative;
+    margin: 40px auto;
 }
-.grid_Cliente th, .grid_Cliente td{
-    padding:10px;
+
+    .grid_Cliente th, .grid_Cliente td {
+        padding: 10px;
+    }
+
+.grid_Produto {
+    width: 600px;
+    position: relative;
+    margin: 40px auto;
 }
+
+    .grid_Produto th, .grid_Produto td {
+        padding: 10px;
+    }

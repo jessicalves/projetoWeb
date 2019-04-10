@@ -13,19 +13,21 @@
 <body>
     <div id="navegacao">
         <div id="area">
-            <h1 id="logo"><span class="verde">Loja</span></h1>
+            <h1 id="logo"><span class="cor">Loja</span></h1>
             <div id="menu">
                 <a href="paginaPrincipal.aspx">Home</a>
-                <a href="cliente2.aspx">Cliente</a>
-                <a href="produto2.aspx">Produtos</a>
+                <a href="cliente.aspx">Cliente</a>
+                <a href="produto.aspx">Produtos</a>
             </div>
         </div>
     </div>
 
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="Corpo" runat="server">
-            </asp:ContentPlaceHolder>
+        <div id="area-principal">
+            <div id="postagem">
+                <asp:ContentPlaceHolder ID="Corpo" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </form>
 

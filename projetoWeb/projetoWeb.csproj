@@ -134,7 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cliente.html" />
-    <Content Include="cliente2.aspx" />
+    <Content Include="cliente.aspx" />
+    <Content Include="ClienteForm.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -157,7 +158,7 @@
     <Content Include="master.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="produto.html" />
-    <Content Include="produto2.aspx" />
+    <Content Include="produto.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -195,12 +196,19 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="cliente2.aspx.cs">
-      <DependentUpon>cliente2.aspx</DependentUpon>
+    <Compile Include="cliente.aspx.cs">
+      <DependentUpon>cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="cliente2.aspx.designer.cs">
-      <DependentUpon>cliente2.aspx</DependentUpon>
+    <Compile Include="cliente.aspx.designer.cs">
+      <DependentUpon>cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.aspx.cs">
+      <DependentUpon>ClienteForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.aspx.designer.cs">
+      <DependentUpon>ClienteForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="modelos\banco.cs" />
     <Compile Include="modelos\Cliente.cs" />
@@ -225,12 +233,12 @@
     <Compile Include="master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
     </Compile>
-    <Compile Include="produto2.aspx.cs">
-      <DependentUpon>produto2.aspx</DependentUpon>
+    <Compile Include="produto.aspx.cs">
+      <DependentUpon>produto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="produto2.aspx.designer.cs">
-      <DependentUpon>produto2.aspx</DependentUpon>
+    <Compile Include="produto.aspx.designer.cs">
+      <DependentUpon>produto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

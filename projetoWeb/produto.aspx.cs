@@ -11,7 +11,8 @@ namespace projetoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            gridProduto.DataSource = Loja.Produto.listarProdutos();
+            gridProduto.DataBind();
         }
     }
 }
