@@ -7,28 +7,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div id="navegacao">
-        <div id="area">
-            <h1 id="logo"><span class="cor">Loja</span></h1>
-            <div id="menu">
-                <a href="paginaPrincipal.aspx">Home</a>
-                <a href="cliente.aspx">Cliente</a>
-                <a href="produto.aspx">Produtos</a>
-            </div>
-        </div>
+    <div class="navegacao">
+        <h1 class="logo">Loja</h1>
+        <nav class="menu">
+            <a href="paginaPrincipal.aspx">Home</a>
+            <a href="cliente.aspx">Cliente</a>
+            <a href="produto.aspx">Produtos</a>
+        </nav>
+
     </div>
 
     <form id="form1" runat="server">
-        <div id="area-principal">
-            <div id="postagem">
-                <asp:ContentPlaceHolder ID="Corpo" runat="server">
-                </asp:ContentPlaceHolder>
-            </div>
-        </div>
+        <asp:ContentPlaceHolder ID="Corpo" runat="server">
+        </asp:ContentPlaceHolder>
     </form>
 
     <asp:ContentPlaceHolder ID="footer" runat="server">

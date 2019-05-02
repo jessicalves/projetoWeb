@@ -21,3 +21,8 @@
     });
 }
 
+$(document).ready(function () {
+    var grid = $('#Corpo_gridCliente');
+    grid.addClass('table table-striped');
+});
+

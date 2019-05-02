@@ -1,82 +1,59 @@
 ﻿
 /*Limpar formatações padrão*/
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
+    margin: 0;
     font-size: 16px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background: #f3f3f3;
+    background-color: #fff;
 }
 
-#navegacao {
-    background: #fff;
-    border-bottom: 1px solid #d8d8d8;
-    height: 45px;
-    position: fixed;
-    width: 100%;
-    top: 0;
+.navegacao {
+    background: rgb(135, 156, 253);
+    border-bottom: solid 5px #1a1b1b;
+    height: 80px;
+    box-sizing: content-box;
 }
 
-#area {
-    width: 720px;
-    margin: 0 auto;
+    .navegacao a {
+        text-decoration: none;
+        color:black;
+        font-size: 1.3em;
+    }
+
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
 }
 
-#area-principal {
-    width: 720px;
-    margin: 55px auto 10px auto;
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+    margin: 13px;
 }
-
-#logo {
-    float: left;
-}
-
-#menu {
-    float: right;
-    padding: 10px 0;
-}
+    .menu a:hover,
+    .menu a.selected {
+        background-color: #026a9e;
+        color: #000;
+    }
 
 h2 {
-    color: cornflowerblue;
+    color:tomato;
     margin: 6px;
     margin-left: auto;
     margin-top: auto;
 }
 
-/****************************************************
-***********************Formatação do menu************/
-a {
-    text-decoration: none;
-    padding: 5px 10px;
-}
-    /*Links não visitados*/
-    a:link {
-        color:cadetblue;
-    }
-
-    /*Links vistados*/
-    a:visited {
-        color: cadetblue;
-    }
-
-    /*Links hover*/
-    a:hover {
-        color: black;
-        background-color: cornflowerblue;
-    }
-
-    /*Links active*/
-    a:active {
-        color:black;
-    }
-
-
-/*Classes*/
-.cor {
-    color:cornflowerblue;
+.area-principal {
+    background-color:#fff;
+    margin:70px;
 }
 
 .data-postagem {
@@ -104,11 +81,7 @@ a {
     margin-top: 10px;
 }
 
-.postagem {
-    background: #fff;
-    padding: 24px;
-    margin-bottom: 64px;
-}
+
 
 .grid_Cliente {
     width: 600px;
