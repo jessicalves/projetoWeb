@@ -13,12 +13,11 @@
     <a href="clienteForm.aspx" style="display: none" id="cadastrar"></a>
     <input class="btn btn-primary" id="editar" onclick="editarCliente()" type="button" value="Editar" />
     <input class="btn btn-primary" id="remover" type="button" value="Remover" />
-
     <div class="input-group w-25 mb-2 p-3">
         <label>ID do Cliente:</label>
         <input class="form-control" id="inputCliente" value="" placeholder="Informe o id" />
     </div>
-
-    <asp:GridView ID="gridCliente" CssClass="grid_Cliente" runat="server">
+    <asp:GridView ID="gridCliente" CssClass="grid_Cliente" OnPreRender="gridCliente_PreRender" runat="server"> 
     </asp:GridView>
+
 </asp:Content>

@@ -82,8 +82,7 @@ h2 {
 }
 
 
-
-.grid_Cliente {
+/*.grid_Cliente {
     width: 600px;
     position: relative;
     margin: 40px auto;
@@ -91,7 +90,7 @@ h2 {
 
     .grid_Cliente th, .grid_Cliente td {
         padding: 10px;
-    }
+    }*/
 
 .grid_Produto {
     width: 600px;

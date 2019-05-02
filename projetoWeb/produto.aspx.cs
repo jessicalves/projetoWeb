@@ -14,5 +14,13 @@ namespace projetoWeb
             gridProduto.DataSource = Loja.Produto.listarProdutos();
             gridProduto.DataBind();
         }
+
+        protected void gridProduto_PreRender(object sender, EventArgs e)
+        {
+            GridView grid = (GridView)sender;
+
+            grid.UseAccessibleHeader = true;
+            grid.HeaderRow.TableSection = TableRowSection.TableHeader;
+        }
     }
 }

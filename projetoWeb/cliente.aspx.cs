@@ -15,7 +15,17 @@ namespace projetoWeb
         {
             gridCliente.DataSource = Loja.Loja.Listar();
             gridCliente.DataBind();
+     
         }
+
+        protected void gridCliente_PreRender(object sender, EventArgs e)
+        {
+            GridView grid = (GridView)sender;
+
+            grid.UseAccessibleHeader = true;
+            grid.HeaderRow.TableSection = TableRowSection.TableHeader;
+        }
+
         [WebMethod]
         public static bool ClienteExiste(string idCliente)
         {
@@ -23,3 +33,5 @@ namespace projetoWeb
         }
     }
 }
+
+  
