@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="navegacao">
-        <h1 class="logo">Loja</h1>
+        <h1 class="logo"><img class="img-postagem" src="img/imagem.jpg"></h1>
         <nav class="menu">
             <a href="paginaPrincipal.aspx">Home</a>
             <a href="cliente.aspx">Cliente</a>

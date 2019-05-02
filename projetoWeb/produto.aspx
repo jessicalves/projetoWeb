@@ -13,9 +13,9 @@
     <input class="btn btn-primary" id="remover" type="button" value="Remover" />
     <div class="input-group w-25 mb-2 p-3">
         <label>ID produto: </label>
-        <input class="form-control" id="inputProduto" value="" placeholder="ID do produto" />
+        <input class="form-control" id="inputProduto" value="" placeholder="Informe o id" />
     </div>
-    <asp:GridView ID="gridProduto" OnPreRender="gridProduto_PreRender"  CssClass="grid_Produto" runat="server">
+    <asp:GridView ID="gridProduto" OnPreRender="gridProduto_PreRender" runat="server">
     </asp:GridView>
 
 </asp:Content>

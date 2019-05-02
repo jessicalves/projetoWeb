@@ -8,7 +8,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Corpo" runat="server">
 
-    <h2>Página do cliente </h2>
+    <h2>Página do Cliente </h2>
     <input class="btn btn-primary" value="Cadastrar" type="button" onclick="document.getElementById('cadastrar').click();" />
     <a href="clienteForm.aspx" style="display: none" id="cadastrar"></a>
     <input class="btn btn-primary" id="editar" onclick="editarCliente()" type="button" value="Editar" />
@@ -17,7 +17,7 @@
         <label>ID do Cliente:</label>
         <input class="form-control" id="inputCliente" value="" placeholder="Informe o id" />
     </div>
-    <asp:GridView ID="gridCliente" CssClass="grid_Cliente" OnPreRender="gridCliente_PreRender" runat="server"> 
+    <asp:GridView ID="gridCliente"  OnPreRender="gridCliente_PreRender" runat="server"> 
     </asp:GridView>
 
 </asp:Content>

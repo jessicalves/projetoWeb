@@ -20,8 +20,9 @@ body {
 
     .navegacao a {
         text-decoration: none;
-        color:black;
+        color: black;
         font-size: 1.3em;
+        padding: inherit;
     }
 
 
@@ -69,7 +70,7 @@ h2 {
     margin: -2px 51px auto auto;
     max-width: 56px;
     max-height: 210px;
-    width: 50px;
+    width: 57px;
     height: auto;
 }
 
@@ -92,7 +93,7 @@ h2 {
         padding: 10px;
     }*/
 
-.grid_Produto {
+/*.grid_Produto {
     width: 600px;
     position: relative;
     margin: 40px auto;
@@ -100,4 +101,4 @@ h2 {
 
     .grid_Produto th, .grid_Produto td {
         padding: 10px;
-    }
+    }*/
