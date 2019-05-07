@@ -13,24 +13,6 @@ namespace projetoWeb {
     public partial class ClienteForm {
         
         /// <summary>
-        /// nomeCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nomeCliente;
-        
-        /// <summary>
-        /// cpfCliente control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText cpfCliente;
-        
-        /// <summary>
         /// BotaoSalvar control.
         /// </summary>
         /// <remarks>
