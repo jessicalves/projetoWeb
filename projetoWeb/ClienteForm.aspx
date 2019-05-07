@@ -10,13 +10,18 @@
 
     <div class="form-group col-3 mt-5">
         <label for="nomeCliente">Nome:</label>
-        <input type="text" class="form-control ml-3" id="nomeCliente" placeholder="Novo nome">
-    </div>
-    <div class="form-group col-3 mt-5">
+        <input id="nomeCliente" type="text" class="form-control ml-3 mb-2" placeholder="Novo nome">
         <label for="cpfCliente">CPF:</label>
-        <input type="text" class="form-control ml-3" id="cpfCliente" placeholder="Novo CPF">
+        <input id="cpfCliente" type="text" class="form-control ml-3" placeholder="Novo CPF">
     </div>
-    <asp:Button class="btn btn-primary ml-4" runat="server" OnClick="BotaoSalvar_Click" ID="BotaoSalvar" Text="Salvar" />
+
+    <div class="form-row mb-0">
+        <div class="col-12">
+            <button class="btn btn-primary ml-4 mr-2" onclick="BotaoSalvar_Click" id="BotaoSalvar">Salvar</button>
+            <button class="btn btn-secondary" type="reset">Cancelar</button>
+        </div>
+    </div>
+
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
