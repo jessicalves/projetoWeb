@@ -82,6 +82,11 @@ h2 {
     margin-top: 10px;
 }
 
+.GridViewRowSelected {
+    background-color: #FFFF99;
+    color: black;
+}
+
 
 /*.grid_Cliente {
     width: 600px;

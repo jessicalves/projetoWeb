@@ -31,6 +31,12 @@ namespace projetoWeb
         {
             return Loja.Loja.Existe(Convert.ToInt32(idCliente));
         }
+
+        [WebMethod]
+        public static bool RemoverCliente(string idCliente)
+        {
+            return Loja.Loja.Remover(idCliente);
+        }
     }
 }
 

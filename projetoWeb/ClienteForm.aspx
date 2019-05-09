@@ -10,9 +10,9 @@
 
     <div class="form-group col-3 mt-5">
         <label for="nomeCliente">Nome:</label>
-        <input id="nomeCliente"  runat="server" type="text" class="form-control ml-3 mb-2" placeholder="Novo nome">
+        <asp:TextBox ID="nomeCliente" runat="server" CssClass="form-control ml-3 mb-2" placeholder="Novo nome"></asp:TextBox>
         <label for="cpfCliente">CPF:</label>
-        <input id="cpfCliente"  runat="server" type="text" class="form-control ml-3" placeholder="Novo CPF">
+        <asp:TextBox ID="cpfCliente"  runat="server" CssClass="form-control ml-3" placeholder="Novo CPF"></asp:TextBox>
     </div>
 
     <div class="form-row mb-0">

@@ -146,24 +146,17 @@ namespace Loja
             banco.getDataTable();
         }
 
-        public static void Remover(string clienteParaRemover)
+        public static bool Remover(string clienteParaRemover)
         {
             string remover = clienteParaRemover;
             //Cliente removerCliente = listClientes.Find(x => x.cfpCliente == remover);
 
             Banco banco = new Banco();
-            banco.sql = @"DELETE FROM public.cliente WHERE clie_cpf = @cpf";
-            banco.addParameters("cpf", remover);
+            banco.sql = @"DELETE FROM public.cliente WHERE clie_id = @id";
+            banco.addParameters("id", remover);
             banco.getDataTable();
 
-            if (remover == null)
-            {
-                Console.WriteLine("\n\n~~~~~ CLIENTE NÃO EXITE ~~~~~~");
-            }
-            else
-            {
-                Console.WriteLine("\n\n~~~~~ CLIENTE REMOVIDO COM SUCESSO ~~~~~");
-            }
+            return true;
         }
 
         public static bool Existe(int id)

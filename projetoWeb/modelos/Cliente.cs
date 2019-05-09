@@ -12,12 +12,21 @@ namespace Loja
         {
             listPedidos = new List<Pedido>();
         }
+
+        public Cliente(string nomeCliente, string cfpCliente, int idCliente)
+        {
+            this.nomeCliente = nomeCliente;
+            this.cfpCliente = cfpCliente;
+            this.idCliente = idCliente;
+            this.listPedidos = new List<Pedido>();
+        }
+
         public List<Pedido> listPedidos;
 
         public string nomeCliente;
         public string cfpCliente;
         public int idCliente { get; set; }
-
+       
         public void fazerCompra(int idPedido, string compraProdutos, string quantidade)
         {
             var novoPedido = new Pedido();
