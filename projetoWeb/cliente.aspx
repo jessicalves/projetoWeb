@@ -8,7 +8,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="Corpo" runat="server">
 
-    <h2>Página do Cliente </h2>
+    <div class="jumbotron p-1 my-1 mb-3">
+        <h2>Página do cliente</h2>
+    </div>
 
     <input class="btn btn-primary ml-4 mb-5 mx-2" value="Cadastrar" type="button" onclick="document.getElementById('cadastrar').click();" />
     <a href="clienteForm.aspx" style="display: none" id="cadastrar"></a>

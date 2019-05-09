@@ -12,15 +12,25 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="navegacao">
-        <h1 class="logo"><img class="img-postagem" src="img/imagem.jpg"></h1>
-        <nav class="menu">
-            <a href="paginaPrincipal.aspx">Home</a>
-            <a href="cliente.aspx">Cliente</a>
-            <a href="produto.aspx">Produtos</a>
-        </nav>
 
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="img/imagem.jpg" width="30" height="30" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="paginaPrincipal.aspx">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cliente.aspx">Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produto.aspx">Produto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <form id="form1" runat="server">
         <asp:ContentPlaceHolder ID="Corpo" runat="server">
