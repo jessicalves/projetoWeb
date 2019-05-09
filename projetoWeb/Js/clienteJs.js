@@ -1,6 +1,5 @@
-﻿function editarCliente() {
-    var c1 = document.getElementById("inputCliente").value;
-    console.log('aqui');
+﻿function editarCliente(e) {
+    var c1 = e;
     $.ajax({
         type: "POST",
         url: "Cliente.aspx/ClienteExiste",
@@ -12,7 +11,7 @@
                 window.location.href = "clienteForm.aspx?&id=" + c1;
             }
             else {
-                alert("Cliente nao existe.");
+                alert("Cliente não existe.");
             }
         },
         error: function (res) {
@@ -20,40 +19,20 @@
         }
     });
 }
+function excluirCliente(e) {
+
+}
 
 $(document).ready(function () { //quando o documento estiver pronto chame essa função
     var grid = $('#Corpo_gridCliente');
-    grid.addClass('table table-striped ');
+    grid.addClass('table table-hover');
+
+    $('#Corpo_gridCliente tbody').dblclick(function (e) {
+        var id = e.target.parentElement.children[0].innerHTML;
+        editarCliente(id);
+        //console.log(e);
+        //console.log(id);
+    })
 });
-$(document).ready(function () {
-    $("tbody").attr("id", "idBody");
-});
 
-//var rows = $('tr.immediate');
-//var table = $('#Corpo_gridCliente');
-//var a = table.click.idCliente;
 
-//var rowData = table.rows(rows).data();
-//console.log(a);
-
-//var table = $('#Corpo_gridCliente').DataTable();
-
-//$('#idBody').on('click', 'tr', function () {
-//    var table = $('#Corpo_gridCliente');
-//    var rowData = table.row(this).data();
-//    console.log(rowData);
-//    // ... do something with `rowData`
-
-//var rows = document.getelementsbytagname('tr');
-//for (var row in rows) {
-//    row.addeventlistener('click', function (e) {
-//        console.log(e.target);
-//    });
-//}
-
-//document.addEventListener('click', function () {
-//    //console.log(e.target);
-//    var table = $('#Corpo_gridCliente');
-//    var rowData = table.row(this).data();
-//    console.log(rowData);
-//})
