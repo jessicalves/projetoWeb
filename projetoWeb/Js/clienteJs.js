@@ -19,6 +19,7 @@
         }
     });
 }
+
 function excluirCliente(e) {
     console.log(e);
         $.ajax({

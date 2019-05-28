@@ -21,7 +21,7 @@
     <div class="form-row mb-0">
         <div class="col-12">
             <asp:Button class="btn btn-primary ml-4 mr-2" runat="server" OnClick="BotaoSalvar_Click" ID="BotaoSalvar" Text="Salvar" />
-            <button class="btn btn-secondary" type="reset">Cancelar</button>
+            <button class="btn btn-secondary" type="reset" onclick="window.location.href='cliente.aspx'" >Cancelar</button>
         </div>
     </div>
 </asp:Content>

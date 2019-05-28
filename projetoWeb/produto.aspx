@@ -7,14 +7,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Corpo" runat="server">
 
-    <h2>Página do Produto </h2>
-    <input class="btn btn-primary" id="cadastrar" type="button" value="Cadastrar" />
-    <input class="btn btn-primary" id="editar" onclick="editarProduto()" type="button" value="Editar" />
-    <input class="btn btn-primary" id="remover" type="button" value="Remover" />
-    <div class="input-group w-25 mb-2 p-3">
-        <label>ID do produto: </label>
-        <input class="form-control" id="inputProduto" value="" placeholder="Informe o id" />
+    <div class="jumbotron p-1 my-1 mb-3">
+        <h2>Página do Produto </h2>
     </div>
+
+    <input class="btn btn-primary ml-4 mb-5 mx-2" value="Cadastrar" type="button"  />
+    <a href="clienteForm.aspx" style="display: none" id="cadastrar"></a>
+    <input class="btn btn-primary mb-5 mx-2" id="remover" type="button" value="Remover" />
+
     <asp:GridView ID="gridProduto" OnPreRender="gridProduto_PreRender" runat="server">
     </asp:GridView>
 
