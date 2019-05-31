@@ -16,8 +16,16 @@
     <a href="clienteForm.aspx" style="display: none" id="cadastrar"></a>
     <%--<input class="btn btn-primary mb-5 mx-2" id="editar" onclick="editarCliente()" type="button" value="Editar" />--%>
     <input class="btn btn-primary mb-5 mx-2" id="remover" type="button" value="Remover" />
+    <input type="search" class="form-control ds-input" id="buscar-input" placeholder="Buscar..." style="width: 50%; margin-bottom: 50px; margin-left: 340px" />
 
     <asp:GridView ID="gridCliente" OnPreRender="gridCliente_PreRender" runat="server">
     </asp:GridView>
+
+    <div id="mostrar" style="display: none; text-align:center" class="alert alert-danger" role="alert">
+        <tr >
+            <td colspan="3">Conteúdo não encontrado</td>
+        </tr>
+    </div>
+
 
 </asp:Content>
